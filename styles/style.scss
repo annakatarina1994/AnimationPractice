@@ -161,3 +161,43 @@ body{
   from {top: -65px; left:35px;}
   to {top: $navPosition; left: -40px}
 }
+
+.projects{
+  width: 80px;
+  height: 80px;
+  background:rgb(42, 34, 94);
+  border-radius: 50%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-variant: small-caps;
+  font-weight: bolder;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: $navPosition;
+  z-index: 1;
+}
+
+.projects.open{
+  animation-name: projectsOpen;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-delay: .6s;
+}
+
+.projects.close{
+  animation-name: projectsClose;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes projectsOpen{
+  from {top: $navPosition; left: -40px}
+  to {top: -65px; left:-100px;}
+}
+
+@keyframes projectsClose{
+  from {top: -65px; left:-100px;}
+  to {top: $navPosition; left: -40px}
+}

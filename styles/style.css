@@ -275,4 +275,91 @@ body {
     left: -40px;
   }
 }
+
+.projects {
+  width: 80px;
+  height: 80px;
+  background: #2a225e;
+  border-radius: 50%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-variant: small-caps;
+  font-weight: bolder;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -160px;
+  z-index: 1;
+}
+
+.projects.open {
+  -webkit-animation-name: projectsOpen;
+          animation-name: projectsOpen;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+.projects.close {
+  -webkit-animation-name: projectsClose;
+          animation-name: projectsClose;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes projectsOpen {
+  from {
+    top: -160px;
+    left: -40px;
+  }
+  to {
+    top: -65px;
+    left: -100px;
+  }
+}
+
+@keyframes projectsOpen {
+  from {
+    top: -160px;
+    left: -40px;
+  }
+  to {
+    top: -65px;
+    left: -100px;
+  }
+}
+
+@-webkit-keyframes projectsClose {
+  from {
+    top: -65px;
+    left: -100px;
+  }
+  to {
+    top: -160px;
+    left: -40px;
+  }
+}
+
+@keyframes projectsClose {
+  from {
+    top: -65px;
+    left: -100px;
+  }
+  to {
+    top: -160px;
+    left: -40px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
