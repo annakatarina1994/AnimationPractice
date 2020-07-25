@@ -1,3 +1,5 @@
+$navPosition : -160px;
+
 *{
   margin: 0;
   padding: 0;
@@ -27,7 +29,7 @@ body{
   background:rgb(42, 34, 94);
   border-radius: 50%;
   position: absolute;
-  top: -140px;
+  top: $navPosition;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,13 +96,13 @@ body{
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -140px;
+  top: $navPosition;
   z-index: 3;
 }
 
 .contact.open{
   animation-name: contactOpen;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -116,8 +118,8 @@ body{
 }
 
 @keyframes contactClose{
-  from {top: -140px; left:80px}
-  to {top: -140px; left: -40px}
+  from {top: $navPosition; left:80px}
+  to {top: $navPosition; left: -40px}
 }
 
 .techStack{
@@ -133,6 +135,29 @@ body{
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -140px;
+  top: $navPosition;
   z-index: 2;
+}
+
+.techStack.open{
+  animation-name: techStackOpen;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-delay: .3s;
+}
+
+.techStack.close{
+  animation-name: techStackClose;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes techStackOpen{
+  from {top: $navPosition; left: -40px}
+  to {top: -65px; left:35px;}
+}
+
+@keyframes techStackClose{
+  from {top: -65px; left:35px;}
+  to {top: $navPosition; left: -40px}
 }
