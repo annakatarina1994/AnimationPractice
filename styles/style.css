@@ -40,7 +40,7 @@ body {
   background: #2a225e;
   border-radius: 50%;
   position: absolute;
-  top: -160px;
+  top: -140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,7 +127,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: -160px;
+  top: -140px;
   z-index: 3;
 }
 
@@ -169,22 +169,22 @@ body {
 
 @-webkit-keyframes contactClose {
   from {
-    top: -160px;
+    top: -140px;
     left: 80px;
   }
   to {
-    top: -160px;
+    top: -140px;
     left: -40px;
   }
 }
 
 @keyframes contactClose {
   from {
-    top: -160px;
+    top: -140px;
     left: 80px;
   }
   to {
-    top: -160px;
+    top: -140px;
     left: -40px;
   }
 }
@@ -208,7 +208,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: -160px;
+  top: -140px;
   z-index: 2;
 }
 
@@ -234,7 +234,7 @@ body {
 
 @-webkit-keyframes techStackOpen {
   from {
-    top: -160px;
+    top: -140px;
     left: -40px;
   }
   to {
@@ -245,7 +245,7 @@ body {
 
 @keyframes techStackOpen {
   from {
-    top: -160px;
+    top: -140px;
     left: -40px;
   }
   to {
@@ -260,7 +260,7 @@ body {
     left: 35px;
   }
   to {
-    top: -160px;
+    top: -140px;
     left: -40px;
   }
 }
@@ -271,7 +271,7 @@ body {
     left: 35px;
   }
   to {
-    top: -160px;
+    top: -140px;
     left: -40px;
   }
 }
@@ -295,7 +295,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: -160px;
+  top: -140px;
   z-index: 1;
 }
 
@@ -321,7 +321,7 @@ body {
 
 @-webkit-keyframes projectsOpen {
   from {
-    top: -160px;
+    top: -140px;
     left: -40px;
   }
   to {
@@ -332,7 +332,7 @@ body {
 
 @keyframes projectsOpen {
   from {
-    top: -160px;
+    top: -140px;
     left: -40px;
   }
   to {
@@ -347,7 +347,7 @@ body {
     left: -100px;
   }
   to {
-    top: -160px;
+    top: -140px;
     left: -40px;
   }
 }
@@ -358,7 +358,94 @@ body {
     left: -100px;
   }
   to {
-    top: -160px;
+    top: -140px;
+    left: -40px;
+  }
+}
+
+.aboutMe {
+  width: 80px;
+  height: 80px;
+  background: #2a225e;
+  border-radius: 50%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-variant: small-caps;
+  font-weight: bolder;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -140px;
+  z-index: 0;
+}
+
+.aboutMe.open {
+  -webkit-animation-name: aboutMeOpen;
+          animation-name: aboutMeOpen;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+
+.aboutMe.close {
+  -webkit-animation-name: aboutMeClose;
+          animation-name: aboutMeClose;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes aboutMeOpen {
+  from {
+    top: -140px;
+    left: -40px;
+  }
+  to {
+    top: -140px;
+    left: -160px;
+  }
+}
+
+@keyframes aboutMeOpen {
+  from {
+    top: -140px;
+    left: -40px;
+  }
+  to {
+    top: -140px;
+    left: -160px;
+  }
+}
+
+@-webkit-keyframes aboutMeClose {
+  from {
+    top: -140px;
+    left: -160px;
+  }
+  to {
+    top: -140px;
+    left: -40px;
+  }
+}
+
+@keyframes aboutMeClose {
+  from {
+    top: -140px;
+    left: -160px;
+  }
+  to {
+    top: -140px;
     left: -40px;
   }
 }

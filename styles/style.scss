@@ -1,4 +1,4 @@
-$navPosition : -160px;
+$navPosition : -140px;
 
 *{
   margin: 0;
@@ -199,5 +199,45 @@ body{
 
 @keyframes projectsClose{
   from {top: -65px; left:-100px;}
+  to {top: $navPosition; left: -40px}
+}
+
+.aboutMe{
+  width: 80px;
+  height: 80px;
+  background:rgb(42, 34, 94);
+  border-radius: 50%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-variant: small-caps;
+  font-weight: bolder;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: $navPosition;
+  z-index: 0;
+}
+
+.aboutMe.open{
+  animation-name: aboutMeOpen;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-delay: .9s;
+}
+
+.aboutMe.close{
+  animation-name: aboutMeClose;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes aboutMeOpen{
+  from {top: $navPosition; left: -40px}
+  to {top: $navPosition; left:-160px;}
+}
+
+@keyframes aboutMeClose{
+  from {top: $navPosition; left:-160px;}
   to {top: $navPosition; left: -40px}
 }

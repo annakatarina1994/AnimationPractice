@@ -19,8 +19,8 @@ menuBtn.addEventListener('click', ()=>{
     projectsBtn.classList.remove('close');
     projectsBtn.classList.add('open');
 
-    // aboutBtn.classList.remove('close');
-    // aboutBtn.classList.add('open');
+    aboutBtn.classList.remove('close');
+    aboutBtn.classList.add('open');
 
     menuOpen = true;
   } else {
@@ -35,8 +35,8 @@ menuBtn.addEventListener('click', ()=>{
     projectsBtn.classList.remove('open');
     projectsBtn.classList.add('close');
 
-    // aboutBtn.classList.remove('open');
-    // aboutBtn.classList.add('close');
+    aboutBtn.classList.remove('open');
+    aboutBtn.classList.add('close');
     
     menuOpen = false;
   }
