@@ -16,11 +16,18 @@ body{
   min-height: 100vh;
 }
 
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu-btn{
   background:rgb(42, 34, 94);
   border-radius: 50%;
-  position: fixed;
-  top: 160px;
+  position: absolute;
+  top: -140px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +35,7 @@ body{
   height: 80px;
   cursor: pointer;
   transition: all .5s ease-in-out;
+  z-index: 4;
 }
 
 .menu-btn__burger{
@@ -73,37 +81,58 @@ body{
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
-.contact.open{
+.contact{
   width: 80px;
   height: 80px;
   background:rgb(42, 34, 94);
   border-radius: 50%;
-  position: relative;
-  top: -115px;
-  z-index: -1;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-variant: small-caps;
+  font-weight: bolder;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -140px;
+  z-index: 3;
+}
+
+.contact.open{
   animation-name: contactOpen;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
 .contact.close{
-  width: 80px;
-  height: 80px;
-  background:rgb(42, 34, 94);
-  border-radius: 50%;
-  position: relative;
-  z-index: -1;
   animation-name: contactClose;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 @keyframes contactOpen {
   from {left: 0px}
-  to {left:120px;}
+  to {left:80px;}
 }
 
 @keyframes contactClose{
-  from {top: -113px; left:120px}
-  to {top: -113px; left: 0px}
+  from {top: -140px; left:80px}
+  to {top: -140px; left: -40px}
+}
+
+.techStack{
+  width: 80px;
+  height: 80px;
+  background:rgb(42, 34, 94);
+  border-radius: 50%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-variant: small-caps;
+  font-weight: bolder;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -140px;
+  z-index: 2;
 }
