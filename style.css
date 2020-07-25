@@ -17,8 +17,10 @@ body{
 }
 
 .menu-btn{
-  position: relative;
-  top: -130px;
+  background:rgb(42, 34, 94);
+  border-radius: 50%;
+  position: fixed;
+  top: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +33,7 @@ body{
 .menu-btn__burger{
   width: 50px;
   height: 6px;
-  background: white;
+  background: black;
   border-radius: 5px;
   transition: all .5s ease-in-out;
 }
@@ -42,7 +44,7 @@ body{
   position: absolute;
   width: 50px;
   height: 6px;
-  background: white;
+  background: black;
   border-radius: 5px;
   transition: all .5s ease-in-out;
 }
@@ -69,4 +71,39 @@ body{
 
 .menu-btn.open .menu-btn__burger::after{
   transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.contact.open{
+  width: 80px;
+  height: 80px;
+  background:rgb(42, 34, 94);
+  border-radius: 50%;
+  position: relative;
+  top: -115px;
+  z-index: -1;
+  animation-name: contactOpen;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.contact.close{
+  width: 80px;
+  height: 80px;
+  background:rgb(42, 34, 94);
+  border-radius: 50%;
+  position: relative;
+  z-index: -1;
+  animation-name: contactClose;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes contactOpen {
+  from {left: 0px}
+  to {left:120px;}
+}
+
+@keyframes contactClose{
+  from {top: -113px; left:120px}
+  to {top: -113px; left: 0px}
 }
